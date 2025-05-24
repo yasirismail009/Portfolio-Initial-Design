@@ -8,7 +8,7 @@ export default function CategoryBar() {
     "Wireframe",
   ];
   return (
-    <div className="w-full bg-[var(--secondary)] text-[var(--primary)] font-semibold flex items-center justify-center py-3 px-2 sticky top-[64px] z-40 shadow-sm">
+    <div className="w-full bg-[var(--primary)] text-white font-semibold flex items-center justify-center py-3 px-2 sticky top-[64px] z-40 shadow-sm">
       <div className="flex gap-8 items-center text-base">
         {categories.map((cat, i) => (
           <React.Fragment key={cat}>

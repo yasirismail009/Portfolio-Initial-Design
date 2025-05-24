@@ -3,19 +3,18 @@ import Link from "next/link";
 
 export default function NavigationBar() {
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm flex items-center justify-between px-8 py-4">
-      <div className="flex items-center gap-2">
-        <Link href="/" className="font-bold text-2xl text-[var(--primary)]">Olivia.</Link>
-      </div>
-      <ul className="hidden md:flex gap-8 text-[var(--primary)] font-medium text-base">
-        <li><Link href="/" className="hover:text-[var(--secondary)]">Home</Link></li>
-        <li><Link href="/services" className="hover:text-[var(--secondary)]">Services</Link></li>
-        <li><Link href="/about" className="hover:text-[var(--secondary)]">About</Link></li>
-        <li><Link href="/projects" className="hover:text-[var(--secondary)]">Projects</Link></li>
-        <li><Link href="/blog" className="hover:text-[var(--secondary)]">Blogs</Link></li>
-        <li><Link href="/testimonials" className="hover:text-[var(--secondary)]">Testimonials</Link></li>
-      </ul>
-      <Link href="/contact" className="ml-4 px-6 py-2 rounded-full bg-[var(--primary)] text-white font-semibold hover:bg-[var(--secondary)] hover:text-[var(--primary)] transition hidden md:block">Contact Me</Link>
-    </nav>
+    <div className="w-full bg-[#F7F8FA] py-4 flex justify-center items-center">
+      <nav className="w-full  flex items-center justify-between px-8 py-3 bg-white rounded-2xl shadow-lg" style={{ boxShadow: '0 4px 24px 0 rgba(0,0,0,0.06)' }}>
+        <div className="flex items-center gap-3">
+          <span className="flex items-center gap-3 font-bold text-xl tracking-wide">
+            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 bg-white text-black font-bold text-lg">C</span>
+            <span className="text-gray-400 font-bold tracking-wide text-lg">COZYDIADORA</span>
+          </span>
+        </div>
+        <Link href="#" className="px-7 py-2 rounded-full bg-black text-white font-semibold shadow-lg hover:bg-gray-800 transition text-base" style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)' }}>
+          Book a call
+        </Link>
+      </nav>
+    </div>
   );
 } 
