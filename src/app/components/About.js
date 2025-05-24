@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 
 const skills = [
   { label: "React.js", x: "60%", y: "20%" },
@@ -26,9 +27,11 @@ export default function About() {
         <div className="relative flex-shrink-0 flex items-center justify-center w-full md:w-auto">
           <div className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px]">
             <div className="absolute inset-0 rounded-full bg-[var(--secondary)]" style={{ zIndex: 1 }} />
-            <img
+            <Image
               src="https://randomuser.me/api/portraits/men/32.jpg"
               alt="Muhammad Yasir Ismail"
+              width={320}
+              height={400}
               className="absolute left-1/2 top-1/2 w-[260px] h-[320px] md:w-[320px] md:h-[400px] object-cover rounded-b-full rounded-t-full -translate-x-1/2 -translate-y-1/2 z-10 shadow-xl"
               style={{ objectPosition: "center top" }}
             />

@@ -5,6 +5,8 @@ import CategoryBar from "../../components/CategoryBar";
 import Footer from "../../components/Footer";
 import { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import React from "react";
+import Image from "next/image";
 
 // This would typically come from your data source
 const getProjectDetails = (id) => {
@@ -112,9 +114,11 @@ export default function ProjectDetailPage({ params }) {
                   {project.images.map((image, index) => (
                     <div key={index} className="flex-[0_0_100%] min-w-0">
                       <div className="relative aspect-video">
-                        <img
+                        <Image
                           src={image}
                           alt={`${project.title} screenshot ${index + 1}`}
+                          width={1200}
+                          height={800}
                           className="object-cover w-full h-full"
                         />
                       </div>

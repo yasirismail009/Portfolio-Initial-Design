@@ -16,7 +16,7 @@ export default function Connect() {
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 rounded-3xl">
         {/* Left Card */}
         <div className="bg-white rounded-3xl shadow-xl p-10 flex flex-col justify-center min-h-[320px]">
-          <h2 className="text-5xl font-bold text-gray-800 mb-8 leading-tight">Let's<br />connect<br />and chat</h2>
+          <h2 className="text-5xl font-bold text-gray-800 mb-8 leading-tight">Let&apos;s<br />connect<br />and chat</h2>
           <div className="flex items-center gap-4 mt-4">
             <span className="text-lg font-semibold text-gray-600 tracking-wide">HELLO@COZY.COM</span>
             <button className="rounded-full bg-gray-400 text-white p-2 shadow hover:bg-gray-700 transition">

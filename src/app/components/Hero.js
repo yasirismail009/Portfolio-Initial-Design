@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const brands = [
   { name: "Lmntrix", logo: "/brands/lmntrix.svg" },
@@ -82,7 +83,7 @@ export default function Hero() {
           ● AVAILABLE FOR WORK
         </span>
         <h1 className="text-7xl md:text-7xl font-bold text-black mb-4">
-          Hi, I'm a<br />
+          Hi, I&apos;m a<br />
           <motion.div
             variants={nameVariants}
             initial="initial"
@@ -112,12 +113,18 @@ export default function Hero() {
             <span className="text-[#1cb5e0] font-bold text-sm">yasirismail321@gmail.com</span>
           </div>
           {/* Profile Image */}
-          <img src="/yasir.jpg" alt="Muhammad Yasir" className="w-72 h-60 rounded-2xl object-cover shadow-lg bg-white" />
+          <Image 
+            src="/yasir.jpg" 
+            alt="Muhammad Yasir" 
+            width={288}
+            height={240}
+            className="w-72 h-60 rounded-2xl object-cover shadow-lg bg-white" 
+          />
         </div>
         {/* Brands */}
         <div className="flex flex-row gap-2 w-full">
         <div className="w-80 bg-gradient-to-r from-[#b3baff] to-[#a0e9ff] rounded-lg p-4 flex flex-col items-center shadow overflow-hidden">
-          <span className="text-xs text-white mb-2">Companies I've worked with &lt;3</span>
+          <span className="text-xs text-white mb-2">Companies I&apos;ve worked with &lt;3</span>
           <motion.div
             variants={scrollVariants}
             animate="animate"

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import StarRating from "./StarRating";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -83,9 +84,11 @@ export default function Testimonials() {
                 >
                   <div className="w-3/4 bg-gradient-to-br from-white via-[var(--background)]/60 to-[var(--muted)]/30 rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-shadow duration-300 hover:scale-[1.02]">
                     <div className="mt-4 mb-4 flex flex-col items-center">
-                      <img
+                      <Image
                         src={testimonial.image}
                         alt={testimonial.name}
+                        width={96}
+                        height={96}
                         className="w-24 h-24 rounded-full object-cover border-4 border-[var(--primary)] shadow bg-white"
                       />
                       <h3 className="mt-4 font-bold text-xl text-[var(--primary)]">{testimonial.name}</h3>

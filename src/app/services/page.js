@@ -192,8 +192,7 @@ export default function ServicesPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-[var(--card-muted)] mb-12 max-w-2xl mx-auto leading-relaxed">
-            Let's discuss how we can help bring your vision to life with our
-            comprehensive services.
+            Let&apos;s discuss how we can bring your vision to life with our expertise and dedication.
           </p>
           <button className="bg-[var(--primary)] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[var(--secondary)] hover:text-[var(--primary)] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
             Get in Touch

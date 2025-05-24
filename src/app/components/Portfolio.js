@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -124,9 +125,11 @@ export default function Portfolio() {
           <div className="mb-10">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[420px] relative transition-all duration-300">
               <div className="w-full md:w-2/3 h-72 md:h-auto overflow-hidden rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none">
-                <img
+                <Image
                   src={filteredProjects[0].img}
                   alt={filteredProjects[0].title}
+                  width={600}
+                  height={400}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
@@ -181,9 +184,11 @@ export default function Portfolio() {
               className="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col justify-between min-h-[320px] relative transition-all duration-300"
             >
               <div className="w-full h-48 overflow-hidden rounded-t-3xl">
-                <img
+                <Image
                   src={project.img}
                   alt={project.title}
+                  width={600}
+                  height={400}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>

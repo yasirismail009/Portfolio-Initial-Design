@@ -2,6 +2,7 @@ import React from 'react';
 import NavigationBar from "../components/NavigationBar";
 import CategoryBar from "../components/CategoryBar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 export const metadata = {
   title: 'Testimonials | Portfolio',
@@ -118,9 +119,11 @@ export default function TestimonialsPage() {
                 className="bg-white rounded-xl shadow-lg p-6 flex flex-col hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 rounded-full object-cover border-2 border-[var(--secondary)]"
                   />
                   <div>
@@ -133,7 +136,7 @@ export default function TestimonialsPage() {
                 <StarRating rating={testimonial.rating} />
                 
                 <p className="text-gray-600 my-4 italic">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 
                 <div className="mt-auto pt-4 border-t border-gray-200">
@@ -157,7 +160,7 @@ export default function TestimonialsPage() {
             Ready to Work Together?
           </h2>
           <p className="text-xl text-[var(--card-muted)] mb-12 max-w-2xl mx-auto leading-relaxed">
-            Let's discuss how we can bring your vision to life with our expertise and dedication.
+            Let&apos;s discuss how we can bring your vision to life with our expertise and dedication.
           </p>
           <button className="bg-[var(--primary)] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[var(--secondary)] hover:text-[var(--primary)] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
             Get in Touch

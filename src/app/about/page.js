@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -14,7 +15,7 @@ export default function AboutPage() {
             About <span className="text-[var(--secondary)]">Me</span>
           </h1>
           <p className="text-lg text-[var(--background)] max-w-2xl">
-            I'm a passionate developer dedicated to creating beautiful and functional web experiences.
+            I&apos;m a passionate developer dedicated to creating beautiful and functional web experiences.
           </p>
         </div>
       </section>
@@ -25,9 +26,11 @@ export default function AboutPage() {
           {/* Left Column - Image */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-              <img
+              <Image
                 src="https://randomuser.me/api/portraits/men/32.jpg"
                 alt="Profile"
+                width={400}
+                height={400}
                 className="w-full h-full object-cover"
               />
             </div>
