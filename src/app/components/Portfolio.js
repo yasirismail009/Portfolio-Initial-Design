@@ -172,6 +172,61 @@ const projects = [
     technologies: ["React.js", "Redux", "Material UI", "WebSocket"],
     liveUrl: "https://internal-management.com",
     githubUrl: "https://github.com/yasirismail009/internal-management"
+  },
+  {
+    id: "privacy-defender-suite",
+    title: "Privacy Defender",
+    agency: "FREELANCE",
+    year: 2024,
+    tags: ["SECURITY", "MOBILE"],
+    category: "Security",
+    description: "Mobile Privacy Protection Security Suite provides Privacy Assurance, Threat Detection and Real-Time protection to meet the needs of Consumers. Advanced threat detection, secure browsing, robust encryption, and features like firewall, malware detection, surveillance protection, web guard, media vault, password manager, and secure notes.",
+    technologies: ["React.js", "Node.js", "Mobile"],
+    detailsUrl: "https://www.pligence.com/privacy-defender-application/"
+  },
+  {
+    id: "pligence-connect",
+    title: "Pligence Connect",
+    agency: "FREELANCE",
+    year: 2024,
+    tags: ["SECURITY", "ENTERPRISE"],
+    category: "Security",
+    description: "Comprehensive Enterprise Mobility and Security Solution with Multi-Site VPN, Threat Management, and Mobile Device Management.",
+    technologies: ["React.js", "Node.js", "VPN"],
+    detailsUrl: "https://www.pligence.com/privacy-defender-application/" // No direct link found, using Privacy Defender as placeholder
+  },
+  {
+    id: "threat-intel-assessment",
+    title: "Threat Intelligence and Assessment Platform",
+    agency: "FREELANCE",
+    year: 2024,
+    tags: ["SECURITY", "INTELLIGENCE"],
+    category: "Security",
+    description: "Provides actionable intelligence-based monitoring and advisory services by identifying latest threats, threat vectors, actors, techniques, and effective defenses to disrupt attacks. Features include real-time vulnerability alerts, social media and dark web surveillance, incident resolution hub, and third-party integration.",
+    technologies: ["React.js", "Node.js", "Analytics"],
+    detailsUrl: "https://www.pligence.com/threat-intelligence-platform/"
+  },
+  {
+    id: "risk-management-compliance",
+    title: "Risk Management & Compliance Platform",
+    agency: "FREELANCE",
+    year: 2024,
+    tags: ["SECURITY", "COMPLIANCE"],
+    category: "Security",
+    description: "Secure, reliable, and affordable Governance, Risk and Compliance Platform for effective risk management, maturity assessment, and compliance. Features include risk identification, assessment, mitigation, maturity evaluation, and compliance management.",
+    technologies: ["React.js", "Node.js", "Compliance"],
+    detailsUrl: "https://www.pligence.com/grc-lens/"
+  },
+  {
+    id: "lmntrix-xdr",
+    title: "LMNTRIX XDR",
+    agency: "FREELANCE",
+    year: 2024,
+    tags: ["SECURITY", "XDR", "DETECTION", "RESPONSE"],
+    category: "Security",
+    description: "LMNTRIX XDR is a hyper-converged detection and response platform that unifies endpoint, network, mobile, cloud, intelligence, and identity telemetry. It provides military-grade protection, automated response, and complete visibility across your security ecosystem. Features include advanced threat detection, automated incident response, forensics, and integration with third-party security tools.",
+    technologies: ["XDR", "NGAV", "EDR", "NDR", "Cloud Security", "Mobile Threat Defense", "Security Analytics"],
+    detailsUrl: "https://lmntrix.com/"
   }
 ];
 
@@ -246,6 +301,16 @@ export default function Portfolio() {
                         GitHub
                       </a>
                     )}
+                    {filteredProjects[0].detailsUrl && (
+                      <a
+                        href={filteredProjects[0].detailsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--secondary)] font-medium hover:underline ml-4"
+                      >
+                        Learn More
+                      </a>
+                    )}
                   </div>
                   <span className="text-gray-400 text-sm font-semibold">{filteredProjects[0].year}</span>
                 </div>
@@ -300,6 +365,16 @@ export default function Portfolio() {
                         className="text-[var(--secondary)] font-medium hover:underline"
                       >
                         GitHub
+                      </a>
+                    )}
+                    {project.detailsUrl && (
+                      <a
+                        href={project.detailsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--secondary)] font-medium hover:underline ml-4"
+                      >
+                        Learn More
                       </a>
                     )}
                   </div>
