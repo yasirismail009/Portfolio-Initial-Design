@@ -105,7 +105,7 @@ export default function CaseStudyDetail({ id }) {
       {caseStudy.content.testimonial && (
         <div className="bg-gray-50 p-12 rounded-3xl mb-16">
           <blockquote className="text-2xl font-medium mb-6 text-[var(--primary)]">
-            "{caseStudy.content.testimonial.quote}"
+            &quot;{caseStudy.content.testimonial.quote}&quot;
           </blockquote>
           <div>
             <div className="font-bold text-[var(--primary)]">{caseStudy.content.testimonial.author}</div>

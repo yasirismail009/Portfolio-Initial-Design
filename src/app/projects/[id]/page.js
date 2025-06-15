@@ -8,6 +8,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import React from "react";
 import Image from "next/image";
 import { projects } from "../../components/Portfolio";
+import Link from "next/link";
 
 // This would typically come from your data source
 const getProjectDetails = (id) => {
@@ -76,6 +77,16 @@ const getProjectDetails = (id) => {
 };
 
 export default function ProjectDetailPage({ params }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+  const scrollTo = useCallback((index) => {
+    if (!emblaApi) return;
+    emblaApi.scrollTo(index);
+  }, [emblaApi]);
   const project = getProjectDetails(params.id);
   
   if (!project) {
@@ -86,32 +97,19 @@ export default function ProjectDetailPage({ params }) {
         <main className="flex-grow container mx-auto px-4 py-12">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl font-bold text-black mb-4">Project Not Found</h1>
-            <p className="text-lg text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
-            <a
+            <p className="text-lg text-gray-600 mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
+            <Link
               href="/projects"
               className="inline-block px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
               Back to Projects
-            </a>
+            </Link>
           </div>
         </main>
         <Footer />
       </div>
     );
   }
-
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  const scrollTo = useCallback((index) => {
-    if (!emblaApi) return;
-    emblaApi.scrollTo(index);
-  }, [emblaApi]);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -135,7 +133,7 @@ export default function ProjectDetailPage({ params }) {
             <div className="w-24 h-1 mx-auto mb-6 rounded bg-[var(--primary)]" />
             {project.description && (
               <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                {project.description}
+                The #1 ERP System for Business Excellence. All-In-One Business Management Suite trusted by 10k+ happy customers worldwide.
               </p>
             )}
             <div className="flex flex-wrap gap-3 justify-center mb-8">
@@ -294,7 +292,7 @@ export default function ProjectDetailPage({ params }) {
                       <p className="text-gray-600 text-black">{testimonial.role}, {testimonial.company}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 italic text-black">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 italic text-black">&quot;{testimonial.quote}&quot;</p>
                 </div>
               )) : <div className='text-gray-400 text-center col-span-2'>No testimonials yet</div>}
             </div>
